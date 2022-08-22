@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
     <title>Konka Soweto</title>
     
     
@@ -28,16 +31,41 @@
     </div>
 </header>
 <body>
-    <div>
-        <!--This is supposed to be an image slider/gallery-->
-        <img class="gallery1" src="images/bottle-ladies.jpg" alt="Waiters Carrying Bottles and Sparkles">
-        <img class="gallery2" src="images/bottle-ladies2.jpg" alt="Waiters Carrying Bottles and Sparkles">
+        <div class="image-slider">
+            <div class="slide active">
+                <!--This is supposed to be an image slider/gallery-->
+                <img src="images/gallery5.jpg" alt="Konka's Luxurious Parking Lot" style="object-fit: cover; object-position: 15% 100%">
+            </div>  
+            <div class="slide gallery2">
+                <!--This is supposed to be an image slider/gallery-->
+                <img src="images/gallery2.jpg" alt="Waiters Carrying Bottles and Sparkles" style="object-fit: cover; object-position: 15% 40%">
+            </div>  
+            <div class="slide gallery3">
+                <!--This is supposed to be an image slider/gallery-->
+                <img src="images/gallery3.jpg" alt="Waiters Carrying Bottles and Sparkles" style="object-fit: cover; object-position: 15% 50%">
+            </div>  
+            <div class="slide gallery4">
+                <!--This is supposed to be an image slider/gallery-->
+                <img src="images/gallery7.jpg" alt="Waiters Carrying Bottles and Sparkles" style="object-fit: cover; object-position: 15% 45%">
+            </div>  
+            <div class="slide gallery5">
+                <!--This is supposed to be an image slider/gallery-->
+                <img src="images/gallery1.jpg" alt="Waiters Carrying Bottles and Sparkles" style="object-fit: cover; object-position: 15% 30%">
+            </div>    
+            <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>    
         <div>
             <h2>UPCOMING EVENTS</h2>
             <div class="flex-poster">
-                <img class="event-posters" src="images/event1.jpg" alt="Mogodu Monday Poster ft. Kabza">
-                <img class="event-posters" src="images/event2.jpg" alt="Mogodu Monday Poster">
-                <img class="event-posters" src="images/event3.jpg" alt="Pabi Cooper Poster/Mogodu Monday">
+                <img class="event-poster1" src="images/event1.jpg" alt="Mogodu Monday Poster ft. Kabza">
+                <img class="event-poster2" src="images/event2.jpg" alt="Mogodu Monday Poster">
+                <img class="event-poster3" src="images/event3.jpg" alt="Pabi Cooper Poster/Mogodu Monday">
             </div>
             <h2>ABOUT</h2>
             <div>
@@ -58,5 +86,65 @@
     </div>
         <footer><p>&copy; Konka Soweto || Created By <a href="#" class="Desiigner">Katleho Clinton Meea</a></p></footer>
 </div>
+
+<script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    //javascript for image slider manual navigation
+
+    var manualNav = function(manual){
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+            
+            btns.forEach((btn) => {
+                btn.classList.remove('active');
+            })
+        })
+
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+        })
+    });
+
+    //javascript for image slider autoplay navigation
+     var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+
+        var repeater = () => {
+            setTimeout(function(){
+                [...active].forEach((activeSlide) => {
+                    activeSlide.classList.remove('active');
+
+                })
+
+                slides[i].classList.add('active');
+                btns[i].classList.add('active');
+                i++;
+
+                if(slides.length == i){
+                    i = 0; 
+                }
+
+                if(i >= slides.length){
+                    return;
+                }
+                repeater();
+            }, 5000);
+        }
+        repeater();
+     }
+     repeat();
+    
+</script>
+
 </body>
 </html>
