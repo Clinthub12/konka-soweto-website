@@ -57,16 +57,17 @@ li {
 
 a:hover{
     color: #ff0000;
+    transition: 0.35s;
 }
 
 .current{
-    color:#fff;
+    color:#ff0000;
     text-decoration: none;
-    border-bottom: 0.125em solid #fff;
+    border-bottom: 0.125em solid #ff0000;
     padding-bottom: 0.25em;
 }
 .current:hover{
-    color:#fff;
+    color:#ff0000;
 }
 
 /*--------------Typography---------------*/
@@ -96,16 +97,79 @@ h2{
 .flex-icon{
     display: flex;
     justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-.social-media-logo{
+.social-media-logo1{
     width: 6.25%;
     margin: 0 1.5em;
 }
 
+.social-media-logo1:hover{
+    position: relative;
+    transform: translateY(-10px);
+    transition: 0.35s;
+    cursor: pointer;
+}
+
+.social-media-logo2{
+    width: 6.25%;
+    margin: 0 1.5em;
+}
+
+.social-media-logo2:hover{
+    position: relative;
+    transform: translateY(-10px);
+    transition: 0.35s;
+    cursor: pointer;
+}
+
+
+.social-media-logo3{
+    width: 6.25%;
+    margin: 0 1.5em;
+}
+
+.social-media-logo3:hover{
+    position: relative;
+    transform: translateY(-10px);
+    transition: 0.35s;
+    cursor: pointer;
+}
+
+
+.social-media-logo4{
+    width: 6.25%;
+    margin: 0 1.5em;
+}
+
+.social-media-logo4:hover{
+    position: relative;
+    transform: translateY(-10px);
+    transition: 0.35s;
+    cursor: pointer;
+}
+
+
 footer{
     text-align: center;
     font-size: small;
+}
+
+.Desiigner{
+    text-decoration: none;
+}
+
+.Desiigner:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.Desiigner:hover{
+    color: #ff0000;
+    transition: 0.35s;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 600px) {
