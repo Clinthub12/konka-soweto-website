@@ -4,6 +4,7 @@ body{
     margin: 0em 2em;
     margin-top: 2em;
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 .container{
@@ -20,6 +21,13 @@ img {
 }
 
 /*------------Body--------------------*/
+
+.konka-logo{
+    display: flex;
+    z-index: 99;
+    margin-bottom: 1em;
+
+}
 
 .image-slider{
     position: relative;
@@ -116,6 +124,84 @@ transition: 0.35s;
 }
 
 /*------------Navigation--------------*/
+
+.main-nav{
+   display: none;
+}
+
+.hamburger{
+    position: relative;
+    display: block;
+    width: 45px;
+    cursor: pointer;
+    z-index: 99;
+    appearance: none;
+    background: none;   
+    outline: none;
+    border: none;
+    margin-left: 95%;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active::before{
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active .bar{
+    opacity: 0;
+}
+
+.hamburger.is-active::after{
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+
+    z-index: 98;
+    background-color: #000;
+    padding-top: 200px;
+    transition: 0.4s;   
+    
+}
+
+.mobile-nav.is-active{
+    left: 0;
+}
+
+.mobile-nav.is-active body{
+    overflow: hidden;
+}
+
+.mobile-nav a{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover{
+    background-color: #000;
+}
 
 .flex-list{
     display: flex;
@@ -256,6 +342,21 @@ footer{
 
 @media screen and (min-width: 600px) {
 
+    /*Navigation*/
+
+
+    .main-nav{
+        display:inline;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+
     /*Image Slider*/
 
     .image-slider{
@@ -355,6 +456,7 @@ footer{
     body{
         margin: 0 0;
         margin-top: 2em;
+        overflow-x: hidden;
     }
 
     .container{
