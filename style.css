@@ -1,3 +1,12 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+}
+
 body{
     background-color: #000;
     color: #fff;
@@ -5,11 +14,6 @@ body{
     margin-top: 2em;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-}
-
-.container{
-    margin: 0 auto;
-    max-width: 500px;
 }
 
 img {
@@ -26,7 +30,6 @@ img {
     display: flex;
     z-index: 99;
     margin-bottom: 1em;
-
 }
 
 .image-slider{
@@ -36,8 +39,6 @@ img {
     background: #000;
    
 }
-
-
 
 .image-slider .slide{
     z-index: 1;
@@ -89,38 +90,16 @@ img {
     flex-direction: column;
 }
 
-.event-poster1{
+.event-poster{
     max-width: 75%;
     margin: 0 auto;
     padding-bottom: 3em;
 }
 
-.event-poster2{
-    max-width: 75%;
-    margin: 0 auto;
-    padding-bottom: 3em;
-}
 
-.event-poster3{
-    max-width: 75%;
-    margin: 0 auto;
-    
-}
-
-.event-poster1:hover{
+.event-poster:hover{
     transform: scale(1.05);
     transition: 0.35s;
-}
-
-.event-poster2:hover{
-transform:scale(1.05) ;
-transition: 0.35s;
-}
-
-.event-poster3:hover{
-transform: scale(1.05);
-transition: 0.35s;
-
 }
 
 /*------------Navigation--------------*/
@@ -269,56 +248,17 @@ h2{
     padding-bottom: 1em;
 }
 
-.social-media-logo1{
+.social-media-logo{
     width: 6.25%;
     margin: 0 1.5em;
 }
 
-.social-media-logo1:hover{
+.social-media-logo:hover{
     position: relative;
     transform: translateY(-10px);
     transition: 0.35s;
     cursor: pointer;
 }
-
-.social-media-logo2{
-    width: 6.25%;
-    margin: 0 1.5em;
-}
-
-.social-media-logo2:hover{
-    position: relative;
-    transform: translateY(-10px);
-    transition: 0.35s;
-    cursor: pointer;
-}
-
-
-.social-media-logo3{
-    width: 6.25%;
-    margin: 0 1.5em;
-}
-
-.social-media-logo3:hover{
-    position: relative;
-    transform: translateY(-10px);
-    transition: 0.35s;
-    cursor: pointer;
-}
-
-
-.social-media-logo4{
-    width: 6.25%;
-    margin: 0 1.5em;
-}
-
-.social-media-logo4:hover{
-    position: relative;
-    transform: translateY(-10px);
-    transition: 0.35s;
-    cursor: pointer;
-}
-
 
 footer{
     text-align: center;
@@ -340,10 +280,40 @@ footer{
     text-decoration: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
+
+    body{
+        margin: 1em;
+        overflow-x: hidden;
+    }
 
     /*Navigation*/
 
+    .img-container{
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        background-color: #000;
+    }
+
+    .content-container{
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        position: relative;
+        background-color: #000;
+        width: 100%;
+        margin-top: 350px;
+        background-color: #000;
+    }
+    .img-container .konka-logo{
+        margin-bottom: 0;
+    }
 
     .main-nav{
         display:inline;
@@ -360,17 +330,16 @@ footer{
     /*Image Slider*/
 
     .image-slider{
-        position: relative;
+        /* position: sticky; */
         width: 100%;
         height: 500px;
-        margin: 10px;
         background: #000;
        
     }
     
     .image-slider .slide{
         z-index: 1;
-        position: absolute;
+        /* position: absolute; */
         width: 100%; 
         clip-path: circle(0% at 0 50%);
     }
@@ -391,7 +360,7 @@ footer{
     
     .image-slider .navigation{
         z-index: 2;
-        position: absolute;
+        /* position: absolute; */
         display: flex;
         bottom: 30px;
         left: 50%;
@@ -420,49 +389,16 @@ footer{
       height: 25em;
     }
 
-    .event-poster1{
+    .event-poster{
         max-width: 75%;
         margin: 0 auto;
     }
     
-    .event-poster2{
-        max-width: 75%;
-        margin: 0 auto;
-    }
-    
-    .event-poster3{
-        max-width: 75%;
-        margin: 0 auto;
-        padding-bottom: 3em;
-    }
-
-    .event-poster1:hover{
+    .event-poster:hover{
              transform: scale(1.05);
              transition: 0.35s;
     }
 
-    .event-poster2:hover{
-        transform:scale(1.05) ;
-        transition: 0.35s;
-    }
-
-    .event-poster3:hover{
-        transform: scale(1.05);
-        transition: 0.35s;
-        
-    }
-
-
-    body{
-        margin: 0 0;
-        margin-top: 2em;
-        overflow-x: hidden;
-    }
-
-    .container{
-        margin: 0 auto;
-        max-width: 100%;
-    }
 
     .info {
         text-align: center;
