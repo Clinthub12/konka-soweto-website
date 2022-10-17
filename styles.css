@@ -132,6 +132,15 @@ img.konka-logo{
 
 /* About Section */
 
+.info {
+    text-align: center;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    line-height: 2.25rem;
+}
+
 .about-section{
     margin-top: 15px;
     margin-bottom: 15px;
@@ -139,8 +148,43 @@ img.konka-logo{
 
 .about-section p{
     text-align: center;
-    font-size: 2rem;
 }
+.vid-container{
+    position: relative;
+    margin: 50px 0 50px 0;
+}
+
+video{
+    width: 100%;
+}
+
+.btn-book-container{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-book{
+    position: relative;
+    
+    padding: 8px 20px;
+    background:#000;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn-book:hover{
+    background: #ff0000;
+    color: #000;
+}
+
+
 
 /* Social Media Section */
 
@@ -316,11 +360,11 @@ a:hover{
 }
 @media screen and (max-width: 425px) {
     body{
-        background-color: #4400ff;
+        background-color: #000;
     }
 }
 @media screen and (max-width: 375px) {
     body{
-        background-color: #0073ff;
+        background-color: #000;
     }
 }
